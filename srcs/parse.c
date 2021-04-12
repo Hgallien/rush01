@@ -66,6 +66,7 @@ t_big_tab	**parse(t_var_main *var)
 			else
 			{
 				res[pvar.x / var->t][pvar.x % var->t].c = buff[pvar.i];
+				mini_fresh(res, var, pvar.x / var->t, pvar.x % var->t);
 				pvar.x++;
 				pvar.i++;
 			}

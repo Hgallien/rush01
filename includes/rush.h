@@ -44,6 +44,7 @@ void		print_final(t_big_tab **tab, t_var_main *var);
 void		print_tab(int x, t_big_tab **tab, char *str);
 void		set_pvar(t_var_parse *var);
 int			max(int a, int b);
+void		mini_fresh(t_big_tab **tab, t_var_main *var, int i, int j);
 int			min(int a, int b);
 t_big_tab	**malloc_big_tab(int x);
 char		**malloc_tab(int x);
