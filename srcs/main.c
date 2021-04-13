@@ -23,6 +23,7 @@ void	in_refresh_tab(t_big_tab **tab, int i, int j)
 			tab[i][j].c_max = tab[i][j].c_max + 1;
 	}
 }
+
 void	mini_fresh(t_big_tab **tab, t_var_main *var, int i, int j)
 {
 	if (j == 0 || i == 0)
@@ -35,7 +36,6 @@ void	mini_fresh(t_big_tab **tab, t_var_main *var, int i, int j)
 		var->p.y = i;
 		var->res = tab[i][j].c_max;
 	}
-
 }
 
 void	refresh_tab_v2(t_big_tab **tab, t_var_main *var)
@@ -85,7 +85,6 @@ int	main(void)
 
 	var.res = 0;
 	tab = parse(&var);
-//	refresh_tab_v2(tab, &var);
 	print_final(tab, &var);
 	free_biggi(tab, &var);
 }
