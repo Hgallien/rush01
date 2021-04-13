@@ -49,7 +49,7 @@ void	set_pvar(t_var_parse *var)
 t_big_tab	**parse(t_var_main *var)
 {
 	t_var_parse		pvar;
-	char			buff[4080];
+	char			buff[8000000];
 	t_big_tab		**res;
 
 	set_pvar(&pvar);
@@ -58,7 +58,7 @@ t_big_tab	**parse(t_var_main *var)
 	while (pvar.r)
 	{
 		pvar.i =0;
-		pvar.r = read(0, buff, 4080);
+		pvar.r = read(0, buff, 8000000);
 		while (pvar.i < pvar.r)
 		{
 			if (buff[pvar.i] == '\n')
